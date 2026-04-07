@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import productRouter from "./routes/products.js";
+import productRouter from "./routes/productRoutes.js";
 
 dotenv.config();
 
