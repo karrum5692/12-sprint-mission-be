@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(process.env.DATABASE_URL)
   .then(() => console.log("연결 성공"))
   .catch((err) => console.error("연결 실패:", err));
 
