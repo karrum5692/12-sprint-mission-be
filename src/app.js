@@ -1,9 +1,9 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import commentRouter from "./routes/productRoutes.js";
+import productRouter from "./routes/productRoutes.js";
 import articleRouter from "./routes/articleRouter.js";
-import productRouter from "./routes/commentRouter.js";
+import commentRouter from "./routes/commentRouter.js";
 
 dotenv.config();
 
@@ -16,6 +16,7 @@ app.use("/products", productRouter);
 app.use("/articles", articleRouter);
 app.use("/comments", commentRouter);
 
-app.listen(process.env.PORT, () => {
-  console.log(`서버 실행 중: http://localhost:${process.env.PORT}`);
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+  console.log(`서버 실행 중: http://localhost:${PORT}`);
 });
